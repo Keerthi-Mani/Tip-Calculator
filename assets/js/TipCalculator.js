@@ -1,40 +1,51 @@
 $(document).ready(function() {
   $(".btn").click(function() {
-    // console.log(billType);
-    var amount = parseFloat(
-      $("#bill-amount")
-        .val()
-        .trim()
-    );
-    // console.log(amount);
-    var tipPercentage = parseFloat(
-      $("#bill-tip")
-        .val()
-        .trim()
-    );
-    var totalPeople = parseInt(
-      $("#bill-sharing")
-        .val()
-        .trim()
-    );
+    //Get the bill amount
+    var amt = $("#bill-amount")
+      .val()
+      .trim();
+    if (amt !== "") {
+      amount = parseFloat(amt);
+    }
 
-    //Quick validation
-    if (amount <= 0 || tipPercentage <= 0) {
+    //Get the tip percentage
+    var percentage = $("#bill-tip")
+      .val()
+      .trim();
+
+    if (percentage !== "") {
+      tipPercentage = parseFloat(percentage);
+    }
+    //Get number of people to share
+    var numOfPersons = $("#bill-sharing")
+      .val()
+      .trim();
+    if (numOfPersons !== "") {
+      numberOfPersons = parseFloat(numOfPersons);
+    } else {
+      numberOfPersons = 1;
+    }
+    //In case total number of people is invalid, default it to 1
+    if (numberOfPersons <= 0) {
+      numberOfPersons = 1;
+    }
+
+    //if amount or % is not entered, alert the user to enter it
+    if (amt === "" || amount <= 0) {
       alert("Please enter the bill amount");
       return;
     }
-    //Check to see if this input is empty or less than or equal to 1
-    if (totalPeople === "" || totalPeople <= 1) {
-      totalPeople = 1;
-      $("#each").hide();
-    } else {
-      $("#each").show();
+    if (percentage === "" || tipPercentage <= 0) {
+      alert("Please enter the percentage");
+      return;
     }
+
+    //calculate the tip amount per person
     var tips = amount * (tipPercentage / 100);
     var totalAmount = tips + amount;
-    var amountPerPerson = (totalAmount / totalPeople).toFixed(2);
+    var amountPerPerson = totalAmount / numberOfPersons;
 
     //Display the tip!
-    $("#tip").text("$" + amountPerPerson + " " + "each");
+    $("#tip").text("$" + amountPerPerson.toFixed(2) + " " + "each");
   });
 });
