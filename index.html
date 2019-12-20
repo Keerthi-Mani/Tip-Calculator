@@ -25,6 +25,7 @@
         <div class="card-body text-center">
           <form class="form-bill">
             <div class="form-group">
+                <!--Name of the bill-->
                 <label>
                     <h3>Type of Bill</h3>
                 </label> <br />
@@ -34,6 +35,7 @@
               <label> <h3>How much was your bill??</h3></label> <br />
               <span>$</span><input type="text" size="30px" id="bill-amount" />
             </div>
+            <!--Appraisal of the service provided-->
             <div class="form-group">
               <label> <h3>How was the service??</label></h3> <br />
               <select id="serviceQuality">
@@ -44,14 +46,29 @@
                 <option>Very Bad</option>
               </select>
             </div>
+            <!--Enter the number in % to calculate the tip -->
             <div class="form-group">
                 <label>
                     <h3>Enter the number that you would like to give as a tip</h3>
                 </label> <br />
                 <span>%</span><input type="text" size="30px" id="bill-tip" />
             </div>
+            <!--form for number of people sharing the bill-->
+            <div class="form-group">
+                <label>
+                    <h3>How many people are sharing the bill?</h3>
+                </label> <br />
+                <span>%</span><input type="text" size="30px" id="bill-sharing" />
+            </div>
+            <button type="button" class= "btn btn-lg btn-success"> Calculate!</button>
           </form>
         </div>
+        <!--totalTip-->
+        <div id="totalTip">
+            <sup>$</sup><span id="tip">0.00</span>
+            <small id="each">each</small>
+        </div>
+        
       </div>
     </div>
   </body>
