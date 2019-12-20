@@ -4,7 +4,7 @@
 
 When you are going to hotel or restaurant, you just give tips... Right?
 
-So If you don't know how to count tips per person (or who will be paying - how many money?). In this case you need to find out per person contribution. I have made a friendly tip calculator which includes facilty for bill amount, Tip in percentage(%), Number of people in group. Just enter above details & it will show you Tips per person and Total per person.
+So If you don't know how to count tips per person (or who will be paying - how many money?). In this case you need to find out per person contribution. I have made a [friendly tip calculator](https://keerthi-mani.github.io/Tip-Calculator/) which includes facilty for bill amount, Tip in percentage(%), Number of people in group. Just enter above details & it will show you Tips per person and Total per person.
 
 ## Technologies Used
 
