@@ -32,9 +32,9 @@ $(document).ready(function() {
     }
     var tips = amount * (tipPercentage / 100);
     var totalAmount = tips + amount;
-    var amountPerPerson = totalAmount / totalPeople;
+    var amountPerPerson = (totalAmount / totalPeople).toFixed(2);
 
     //Display the tip!
-    $("#tip").text(amountPerPerson);
+    $("#tip").text("$" + amountPerPerson + " " + "each");
   });
 });
