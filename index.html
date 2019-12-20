@@ -19,12 +19,16 @@
     
     <!-- Added link to the jQuery library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Added link to the CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>Tip Calculator</title>
   </head>
   <body>
     <div class="container">
-      <div class="card">
-        <div class="text-center">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card p-2">
+                    <div class="card-header text-center">
           <h1>Keerthi's Tip Calculator</h1>
         </div>
         <br>
@@ -44,7 +48,7 @@
             <!--Appraisal of the service provided-->
             <div class="form-group">
               <label> <h3>How was the service??</label></h3> <br />
-              <select id="serviceQuality">
+              <select>
                 <option>Choose an option</option>
                 <option>Outstanding Service</option>
                 <option>Good Service</option>
@@ -75,6 +79,8 @@
             <sh3 id="each">each</h3>
         </div> 
       </div>
+    </div>
+    </div>
     </div>
     <script type="text/javascript" src="assets/js/TipCalculator.js"></script>
   </body>
